@@ -1,29 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/18 19:19:31 by migmoren          #+#    #+#             */
-/*   Updated: 2022/09/18 19:40:20 by migmoren         ###   ########.fr       */
+/*   Created: 2022/09/18 19:33:59 by migmoren          #+#    #+#             */
+/*   Updated: 2022/09/18 19:55:51 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef	LIBFT_H
+# define LIBFT_H
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+# include <stdlib.h>
+
+typedef struct s_list
 {
-	unsigned int	i;
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 
-	i = 0;
-	while ((s1[i] != '\0' || s2[i] != '\0') && i < n)
-	{
-		if (s1[i] > s2[i])
-			return (1);
-		else if (s1[i] < s2[i])
-			return (-1);
-		i++;
-	}
-	return (0);
-}
+#endif

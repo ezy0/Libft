@@ -1,5 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/18 19:19:53 by migmoren          #+#    #+#             */
+/*   Updated: 2022/09/18 21:54:51 by migmoren         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int	ft_strlen(char *str)
+#include "libft.h"
+
+static int	ft_strlen(char *str)
 {
 	int	i;
 
@@ -9,7 +22,7 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-int	ft_strlcat(char *dst, const char *src, int size)
+int	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	int	i;
 	int	l_dst;
