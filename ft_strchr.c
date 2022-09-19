@@ -6,21 +6,13 @@
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 19:20:20 by migmoren          #+#    #+#             */
-/*   Updated: 2022/09/18 21:22:11 by migmoren         ###   ########.fr       */
+/*   Updated: 2022/09/19 15:28:19 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_strlen(const char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
+int		ft_strlen(const char *s);
 
 char	*ft_strchr(const char *s, int c)
 {
