@@ -6,7 +6,7 @@
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 12:22:44 by migmoren          #+#    #+#             */
-/*   Updated: 2022/09/18 19:36:34 by migmoren         ###   ########.fr       */
+/*   Updated: 2022/09/20 18:45:20 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,10 @@
 
 int	ft_isdigit(int c)
 {
-	if (c >= 0 && c <= 9)
+	char	aux;
+
+	aux = c;
+	if (aux >= '0' && aux <= '9')
 		return (1);
 	return (0);
 }

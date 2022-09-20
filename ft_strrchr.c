@@ -6,7 +6,7 @@
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 19:19:03 by migmoren          #+#    #+#             */
-/*   Updated: 2022/09/19 15:32:03 by migmoren         ###   ########.fr       */
+/*   Updated: 2022/09/20 18:28:43 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,11 @@ char	*ft_strrchr(const char *s, int c)
 	j = 0;
 	while (++j <= i)
 		s++;
-	while (*s != c && --j >= 0)
+	while (--j >= 0)
+	{
+		if (*s == c)
+			return ((char *)s);
 		s--;
-	if (*s == c)
-		return ((char *)s);
+	}
 	return (0);
 }

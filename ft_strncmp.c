@@ -6,7 +6,7 @@
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 19:19:31 by migmoren          #+#    #+#             */
-/*   Updated: 2022/09/18 19:40:20 by migmoren         ###   ########.fr       */
+/*   Updated: 2022/09/20 18:40:19 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	i = 0;
 	while ((s1[i] != '\0' || s2[i] != '\0') && i < n)
 	{
-		if (s1[i] > s2[i])
+		if (s1[i] > s2[i] || s2[i] == '\0')
 			return (1);
-		else if (s1[i] < s2[i])
+		else if (s1[i] < s2[i] || s1[i] == '\0')
 			return (-1);
 		i++;
 	}
