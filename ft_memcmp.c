@@ -14,22 +14,22 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
+	size_t		i;
 	unsigned char	*aux1;
 	unsigned char	*aux2;
-
-	aux1 = s1;
-	aux2 = s2;
+	
+	i = 0;	
+	aux1 = (unsigned char *)s1;
+	aux2 = (unsigned char *)s2;
 	if (s1 == s2)
 		return (0);
-	while ((*aux1 != '\0' || *aux2 != '\0') && n > 0)
+	while ((aux1[i] != '\0' || aux2[i] != '\0') && i < n)
 	{
-		if (*aux1 > *aux2 || *aux2 == '\0')
+		if (aux1[i] > aux2[i] || aux2[i] == '\0')
 			return (1);
-		else if (*aux1 < *aux2 || *aux1 == '\0')
+		else if (aux1[i] < aux2[i] || aux1[i] == '\0')
 			return (-1);
-		aux1++;
-		aux2++;
-		n--;
+		i++;
 	}
 	return (0);
 }
