@@ -6,7 +6,7 @@
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 17:43:17 by migmoren          #+#    #+#             */
-/*   Updated: 2022/09/19 16:34:44 by migmoren         ###   ########.fr       */
+/*   Updated: 2022/09/21 16:37:57 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	size_t	i;
 
 	i = -1;
-	if (!dest || !src)
-		return (dest); //0
+	if (!dest && !src)
+		return (0);
 	if (dest > src)
 	{
 		i = n - 1;

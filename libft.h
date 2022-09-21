@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/18 19:33:59 by migmoren          #+#    #+#             */
-/*   Updated: 2022/09/19 15:38:32 by migmoren         ###   ########.fr       */
+/*   Created: 2022/09/21 16:32:19 by migmoren          #+#    #+#             */
+/*   Updated: 2022/09/21 16:43:32 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,12 @@
 # define LIBFT_H
 
 # include <stdlib.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 
 void	ft_bzero(void *s, size_t n);
 int		ft_isalnum(int c);
@@ -33,11 +39,6 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strrchr(const char *s, int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
-
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}					t_list;
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
 #endif
