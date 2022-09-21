@@ -14,10 +14,7 @@
 
 int	ft_isdigit(int c)
 {
-	char	aux;
-
-	aux = c;
-	if (aux >= '0' && aux <= '9')
+	if (c >= '0' && c <= '9')
 		return (1);
 	return (0);
 }
