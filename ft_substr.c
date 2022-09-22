@@ -1,29 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/21 16:42:05 by migmoren          #+#    #+#             */
-/*   Updated: 2022/09/22 15:53:34 by migmoren         ###   ########.fr       */
+/*   Created: 2022/09/22 17:12:04 by migmoren          #+#    #+#             */
+/*   Updated: 2022/09/22 18:19:46 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+int		ft_strlen(const char *s);
+
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	if (s1 == s2)
+	char				*cpy;
+	size_t				i;
+	unsigned int		j;
+
+	i = 0;
+	j = 0;
+	if (len <= (size_t)ft_strlen(s))
+		cpy = (char *)malloc(sizeof(char) * (len + 1));
+	else
+		cpy = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (!cpy)
 		return (0);
-	while (n-- > 0)
+	while (s[j] != '\0' && i < len)
 	{
-		if (*(unsigned char *)s1 > *(unsigned char *)s2 || !s2)
-			return (*(unsigned char *)s1 - *(unsigned char *)s2);
-		else if (*(unsigned char *)s1 < *(unsigned char *)s2 || !s1)
-			return (*(unsigned char *)s1 - *(unsigned char *)s2);
-		s1++;
-		s2++;
+		if (j >= start)
+			cpy[i++] = s[j];
+		j++;
 	}
-	return (0);
+	cpy[i] = '\0';
+	return (cpy);
 }

@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/21 16:42:05 by migmoren          #+#    #+#             */
-/*   Updated: 2022/09/22 15:53:34 by migmoren         ###   ########.fr       */
+/*   Created: 2022/09/22 18:21:01 by migmoren          #+#    #+#             */
+/*   Updated: 2022/09/22 18:31:25 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+int		ft_strlen(const char *s);
+
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	if (s1 == s2)
-		return (0);
-	while (n-- > 0)
+	int		i;
+	int		j;
+	char	*str;
+	int		bol;
+
+	i = -1;
+	bol = 1;
+	str = malloc(ft_strlen(s1));
+	while (s1[++i] && bol)
 	{
-		if (*(unsigned char *)s1 > *(unsigned char *)s2 || !s2)
-			return (*(unsigned char *)s1 - *(unsigned char *)s2);
-		else if (*(unsigned char *)s1 < *(unsigned char *)s2 || !s1)
-			return (*(unsigned char *)s1 - *(unsigned char *)s2);
-		s1++;
-		s2++;
+		j = -1;
+		while (set[++j])
+			bol = s1[i] == set[j]
+
+
 	}
-	return (0);
 }

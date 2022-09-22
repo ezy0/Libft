@@ -1,29 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/21 16:42:05 by migmoren          #+#    #+#             */
-/*   Updated: 2022/09/22 15:53:34 by migmoren         ###   ########.fr       */
+/*   Created: 2022/09/22 16:09:27 by migmoren          #+#    #+#             */
+/*   Updated: 2022/09/22 16:16:39 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+int	ft_atoi(const char *str)
 {
-	if (s1 == s2)
-		return (0);
-	while (n-- > 0)
+	int	i;
+	int	neg;
+	int	num;
+
+	i = 0;
+	neg = 0;
+	num = 0;
+	while (((str[i] >= 9 && str[i] <= 13) || str[i] == ' ') && str[i] != '\0')
+		i++;
+	if (str[i] == '-' && str[i] != '\0')
 	{
-		if (*(unsigned char *)s1 > *(unsigned char *)s2 || !s2)
-			return (*(unsigned char *)s1 - *(unsigned char *)s2);
-		else if (*(unsigned char *)s1 < *(unsigned char *)s2 || !s1)
-			return (*(unsigned char *)s1 - *(unsigned char *)s2);
-		s1++;
-		s2++;
+		neg++;
+		i++;
 	}
-	return (0);
+	else if (str[i] == '+' && str[i] != '\0')
+		i++;
+	while (str[i] >= 48 && str[i] <= 57 && str[i] != '\0')
+	{
+		num = num * 10 + (str[i] - '0');
+		i++;
+	}
+	if (neg == 0)
+		return (num);
+	else
+		return (num * -1);
 }
