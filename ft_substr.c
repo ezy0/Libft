@@ -6,7 +6,7 @@
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 17:12:04 by migmoren          #+#    #+#             */
-/*   Updated: 2022/09/22 18:19:46 by migmoren         ###   ########.fr       */
+/*   Updated: 2022/09/27 18:05:58 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ int		ft_strlen(const char *s);
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char				*cpy;
-	size_t				i;
-	unsigned int		j;
+	char			*cpy;
+	size_t			i;
+	unsigned int	j;
 
 	i = 0;
 	j = 0;

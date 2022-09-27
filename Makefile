@@ -6,7 +6,7 @@
 #    By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/18 21:53:23 by migmoren          #+#    #+#              #
-#    Updated: 2022/09/22 18:22:44 by migmoren         ###   ########.fr        #
+#    Updated: 2022/09/27 18:46:27 by migmoren         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ SRC = ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 	ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_strncmp.c ft_strrchr.c \
 	ft_tolower.c ft_toupper.c ft_memchr.c ft_memcmp.c ft_strnstr.c \
 	ft_atoi.c ft_calloc.c ft_strdup.c ft_substr.c ft_strjoin.c\
-	ft_strtrim.c
+	ft_strtrim.c ft_split.c
 
 all: $(NAME)
 
