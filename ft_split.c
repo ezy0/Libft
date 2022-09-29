@@ -49,7 +49,7 @@ static char	*ft_word(char const *s, char c)
 
 	i = 0;
 	j = ft_wordlen(s, c);
-	word = malloc (sizeof(char const) * ft_wordlen(s, c) + 1);
+	word = (char *)malloc(sizeof(char) * ft_wordlen(s, c) + 1);
 	while (i < j)
 	{
 		word[i] = s[i];
@@ -64,27 +64,20 @@ char	**ft_split(char const *s, char c)
 	char	**words;
 	int	i;
 
-	words = malloc(sizeof(char) * (ft_numwords(s, c) + 1));
 	i = 0;
+	words = (char **)malloc(sizeof(char *) * (ft_numwords(s, c) + 1));
+	if (!words)
+		return (0);
 	while (*s)
 	{
-		while (*s == c && s)
+		while (*s == c && *s)
 			s++;
 		if (*s)
 			words[i++] = ft_word(s, c);
-		while (*s != c && s)
+		while (*s != c && *s)
 			s++;
 	}
-	words[i] = 0;
+	words[i] = '\0';
 	return (words);
 }
 
-int main()
-{
-	char **words;
-	char s[] = "me cago en dios";
-	char c = ' ';
-	words = ft_split(s, c);
-	printf("%s", words[0]);
-	free(words);
-}
