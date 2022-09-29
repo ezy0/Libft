@@ -44,11 +44,13 @@ static int	ft_numwords(char const *s, char c)
 static char	*ft_word(char const *s, char c)
 {
 	int		i;
+	int		j;
 	char	*word;
 
 	i = 0;
+	j = ft_wordlen(s, c);
 	word = malloc (sizeof(char const) * ft_wordlen(s, c) + 1);
-	while (i < ft_wordlen(s, c))
+	while (i < j)
 	{
 		word[i] = s[i];
 		i++;
@@ -64,11 +66,11 @@ char	**ft_split(char const *s, char c)
 
 	words = malloc(sizeof(char) * (ft_numwords(s, c) + 1));
 	i = 0;
-	while (s)
+	while (*s)
 	{
 		while (*s == c && s)
 			s++;
-		if (s)
+		if (*s)
 			words[i++] = ft_word(s, c);
 		while (*s != c && s)
 			s++;
