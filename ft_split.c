@@ -10,11 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.h"
-
-//char	*ft_strdup(const char *src);
-//int		ft_strlen(const char *s);
-//int		ft_strlcpy(char *dst, const char *src, size_t dstsize);
+#include "libft.h"
 
 static int	ft_wordlen(char const *s, char c)
 {
@@ -30,27 +26,17 @@ static int	ft_numwords(char const *s, char c)
 {
 	int	i;
 	int	j;
-	int	k;
-	int	new;
-
+	
 	i = 0;
-	j = 1;
-	while (s[i] != '\0')
+	j = 0;
+	while (s[i])
 	{
-		new = 0;
-		if (s[i] == c)
-		{
-			k = i;
-			while (s[k] == c && s[k] != '\0' && !new)
-			{
-				k++;
-				if (s[k] != c && s[k] != '\0')
-					new = 1;
-			}
-		}
-		if (new)
+		while (s[i] && s[i] == c)
+			i++;
+		if (s[i])
 			j++;
-		i++;
+		while (s[i] && s[i] != c)
+			i++;
 	}
 	return (j);
 }
@@ -71,40 +57,32 @@ static char	*ft_word(char const *s, char c)
 	return (word);
 }
 
-/*char	**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**words;
-	char	*word;
-	int		i;
-	int		j;
+	int	i;
 
-	words = malloc(sizeof(char const) * ft_numwords(s, c));
+	words = malloc(sizeof(char) * (ft_numwords(s, c) + 1));
 	i = 0;
-	j = 0;
 	while (s)
 	{
-		word = ft_strdup(ft_word(s, c));
-		while (word[j])
-		{
-			words[i][j] = word[j];
-			j++;
-		}
-		free (word);
-		i++;
-		while (j > 0)
-		{
+		while (*s == c && s)
 			s++;
-			j--;
-		}
+		if (s)
+			words[i++] = ft_word(s, c);
+		while (*s != c && s)
+			s++;
 	}
+	words[i] = 0;
 	return (words);
-}*/
+}
 
 int main()
 {
-	char s[] = " 1234 1234      ";
+	char **words;
+	char s[] = "me cago en dios";
 	char c = ' ';
-	char *word =ft_word(s, c);
-	printf ("%d", ft_numwords(s, c));
-	free(word);
+	words = ft_split(s, c);
+	printf("%s", words[0]);
+	free(words);
 }
