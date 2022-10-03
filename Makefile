@@ -31,8 +31,11 @@ OBJS = $(SRC:.c=.o)
 
 OBJS_B = $(SRC_B:.c=.o)
 
-$(NAME): $(OBJS) $(OBJS_B)
-	@ar rsc $(NAME) $(OBJS) $(OBJS_B)
+$(NAME): $(OBJS)
+	@ar rsc $(NAME) $(OBJS)
+
+bonus:	$(OBJS) $(OBJS_B)
+	@ar rcs $(NAME) $(OBJS) $(OBJS_B)
 	
 clean:
 	@rm -f $(OBJS) $(OBJS_B)
@@ -42,4 +45,4 @@ fclean:
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
