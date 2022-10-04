@@ -6,7 +6,7 @@
 #    By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/18 21:53:23 by migmoren          #+#    #+#              #
-#    Updated: 2022/10/02 20:05:31 by migmoren         ###   ########.fr        #
+#    Updated: 2022/10/04 19:29:05 by migmoren         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,8 +23,10 @@ SRC = ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 	ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c\
 	ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c\
 	
-SRC_B = ft_lstnew.c
-
+SRC_B = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c\
+		ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c\
+		ft_lstmap.c
+		
 all: $(NAME)
 
 OBJS = $(SRC:.c=.o)
