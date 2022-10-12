@@ -6,7 +6,7 @@
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 18:31:23 by migmoren          #+#    #+#             */
-/*   Updated: 2022/10/05 19:05:23 by migmoren         ###   ########.fr       */
+/*   Updated: 2022/10/12 18:31:50 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
+	if (!lst || !del)
+		return ;
 	del (lst->content);
 	free (lst);
 }

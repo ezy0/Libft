@@ -6,7 +6,7 @@
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 18:57:22 by migmoren          #+#    #+#             */
-/*   Updated: 2022/10/05 19:04:54 by migmoren         ###   ########.fr       */
+/*   Updated: 2022/10/12 18:44:16 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
+	if (!s || !fd)
+		return ;
 	write (fd, s, ft_strlen(s));
 }

@@ -6,7 +6,7 @@
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 17:12:04 by migmoren          #+#    #+#             */
-/*   Updated: 2022/10/05 19:03:23 by migmoren         ###   ########.fr       */
+/*   Updated: 2022/10/12 18:31:46 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	i = 0;
 	j = 0;
+	if (!s)
+		return (0);
 	if (len <= (size_t)ft_strlen(s))
 		cpy = (char *)malloc(sizeof(char) * (len + 1));
 	else

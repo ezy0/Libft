@@ -6,7 +6,7 @@
 #    By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/18 21:53:23 by migmoren          #+#    #+#              #
-#    Updated: 2022/10/05 18:14:45 by migmoren         ###   ########.fr        #
+#    Updated: 2022/10/12 20:04:06 by migmoren         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,7 @@ bonus:	$(OBJS) $(OBJS_B)
 clean:
 	@rm -f $(OBJS) $(OBJS_B)
 
-fclean:
+fclean: clean
 	@rm -f $(NAME)
 
 re: fclean all

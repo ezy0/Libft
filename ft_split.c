@@ -6,7 +6,7 @@
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 18:40:04 by migmoren          #+#    #+#             */
-/*   Updated: 2022/09/30 19:02:40 by migmoren         ###   ########.fr       */
+/*   Updated: 2022/10/12 18:42:39 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,8 @@ char	**ft_split(char const *s, char c)
 	int		i;
 
 	i = 0;
+	if (!s)
+		return (0);
 	words = (char **)malloc(sizeof(char *) * (ft_numwords(s, c) + 1));
 	if (!words)
 		return (0);

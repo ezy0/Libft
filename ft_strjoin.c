@@ -6,7 +6,7 @@
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 18:10:23 by migmoren          #+#    #+#             */
-/*   Updated: 2022/10/05 19:03:38 by migmoren         ###   ########.fr       */
+/*   Updated: 2022/10/12 18:34:08 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	i = 0;
 	j = 0;
+	if (!s1)
+		return (0);
+	if (!s2)
+		return ((char *)s1);
 	join = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (!join)
 		return (0);

@@ -6,7 +6,7 @@
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 16:16:00 by migmoren          #+#    #+#             */
-/*   Updated: 2022/10/12 13:28:20 by migmoren         ###   ########.fr       */
+/*   Updated: 2022/10/12 19:48:49 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*aux;
 
+	if (count == SIZE_MAX || size == SIZE_MAX)
+		return (0);
 	aux = (void *)malloc(count * size);
 	if (!aux)
 		return (0);

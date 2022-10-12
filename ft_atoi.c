@@ -6,17 +6,22 @@
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 16:09:27 by migmoren          #+#    #+#             */
-/*   Updated: 2022/10/12 11:33:07 by migmoren         ###   ########.fr       */
+/*   Updated: 2022/10/12 20:09:15 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*static int	max_atoi (long num, int neg)
+{
+	if (num )	9223372036854775807
+}*/
+
 int	ft_atoi(const char *str)
 {
-	size_t	i;
-	int		neg;
-	size_t	num;
+	int	i;
+	int	neg;
+	int	num;
 
 	i = 0;
 	neg = 0;
