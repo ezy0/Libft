@@ -6,13 +6,11 @@
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 19:19:53 by migmoren          #+#    #+#             */
-/*   Updated: 2022/10/12 10:57:55 by migmoren         ###   ########.fr       */
+/*   Updated: 2022/10/12 13:06:32 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int		ft_strlen(const char *s);
 
 int	ft_strlcat(char *dst, const char *src, size_t size)
 {

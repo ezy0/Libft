@@ -6,13 +6,11 @@
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 17:07:55 by migmoren          #+#    #+#             */
-/*   Updated: 2022/10/04 18:36:54 by migmoren         ###   ########.fr       */
+/*   Updated: 2022/10/12 13:06:28 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int	ft_lstsize(t_list *lst);
 
 t_list	*ft_lstlast(t_list *lst)
 {

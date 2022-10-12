@@ -6,13 +6,11 @@
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 19:19:03 by migmoren          #+#    #+#             */
-/*   Updated: 2022/09/21 16:27:27 by migmoren         ###   ########.fr       */
+/*   Updated: 2022/10/12 13:06:33 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int	ft_strlen(const char *str);
 
 char	*ft_strrchr(const char *s, int c)
 {
