@@ -6,13 +6,11 @@
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 17:56:44 by migmoren          #+#    #+#             */
-/*   Updated: 2022/10/02 18:30:44 by migmoren         ###   ########.fr       */
+/*   Updated: 2022/10/05 19:04:44 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int		ft_strlen(const char *s);
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

@@ -6,13 +6,11 @@
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 18:21:01 by migmoren          #+#    #+#             */
-/*   Updated: 2022/10/02 19:40:13 by migmoren         ###   ########.fr       */
+/*   Updated: 2022/10/05 19:03:49 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int		ft_strlen(const char *s);
 
 static int	ft_clean_front(char const *s1, char const *set)
 {

@@ -6,13 +6,11 @@
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 18:10:23 by migmoren          #+#    #+#             */
-/*   Updated: 2022/09/27 18:05:57 by migmoren         ###   ########.fr       */
+/*   Updated: 2022/10/05 19:03:38 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int		ft_strlen(const char *s);
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

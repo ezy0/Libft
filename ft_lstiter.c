@@ -6,7 +6,7 @@
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 19:24:06 by migmoren          #+#    #+#             */
-/*   Updated: 2022/10/04 19:27:50 by migmoren         ###   ########.fr       */
+/*   Updated: 2022/10/05 19:06:46 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 	aux = lst;
 	while (aux)
 	{
-		f(aux->content);
+		(f)(aux->content);
 		aux = aux->next;
 	}
 }

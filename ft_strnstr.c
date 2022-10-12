@@ -6,7 +6,7 @@
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 15:54:01 by migmoren          #+#    #+#             */
-/*   Updated: 2022/09/22 16:08:04 by migmoren         ###   ########.fr       */
+/*   Updated: 2022/10/12 10:58:47 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	i = 0;
 	if (needle[0] == '\0')
 		return ((char *)haystack);
+	if (!haystack || haystack[0] == '\0')
+		return (0);
 	while (haystack[i] != '\0' && i < len)
 	{
 		j = 0;
