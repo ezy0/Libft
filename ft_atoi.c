@@ -12,10 +12,14 @@
 
 #include "libft.h"
 
-/*static int	max_atoi (long num, int neg)
+static long	max_atoi (long num, int neg)
 {
-	if (num )	9223372036854775807
-}*/
+	if (num > 9223372036854775807 && !neg)
+		return(0);
+	else if (neg)
+		return (-1);
+	return (num)
+}
 
 int	ft_atoi(const char *str)
 {
@@ -41,7 +45,7 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	if (neg == 0)
-		return (num);
+		return (max_atoi(num, neg);
 	else
-		return (num * -1);
+		return (max_atoi(num, neg) * -1);
 }
