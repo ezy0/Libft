@@ -6,7 +6,7 @@
 #    By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/18 21:53:23 by migmoren          #+#    #+#              #
-#    Updated: 2022/10/12 20:04:06 by migmoren         ###   ########.fr        #
+#    Updated: 2022/10/17 19:09:30 by migmoren         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,16 +27,23 @@ SRC_B = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c\
 		ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c\
 		ft_lstmap.c
 
-all: $(NAME)
-
 OBJS = $(SRC:.c=.o)
 
 OBJS_B = $(SRC_B:.c=.o)
 
+BONUS = .
+
+.c.o:
+	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
+
+all: $(NAME)
+
 $(NAME): $(OBJS)
 	@ar rsc $(NAME) $(OBJS)
 
-bonus:	$(OBJS) $(OBJS_B)
+bonus: $(BONUS)
+
+$(BONUS):	$(OBJS) $(OBJS_B)
 	@ar rcs $(NAME) $(OBJS) $(OBJS_B)
 	
 clean:
