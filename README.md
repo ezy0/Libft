@@ -1,7 +1,8 @@
 # Libft
-Librería Libft de 42, AUN EN PROCESO
+Librería Libft de 42, TERMINADA Y PASA TODOS LOS TESTERS
+
+*** PENDIENTE DE EVALUAR ***
 
 Enunciado en subject
-Clean que flipas, hay q acabar el atoi y listo
 
 Los testers que pasa son war machine, Tripouille, tester de alelievr y tester de fsoares. Todos los testers en francinette -----> https://github.com/xicodomingues/francinette
