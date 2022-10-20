@@ -5,4 +5,8 @@ Librería Libft de 42, TERMINADA Y PASA TODOS LOS TESTERS
 
 Enunciado en subject
 
-Los testers que pasa son war machine, Tripouille, tester de alelievr y tester de fsoares. Todos los testers en francinette -----> https://github.com/xicodomingues/francinette
+Los testers que pasa son war machine, Tripouille y tester de alelievr (unit tester). El francinette mejor q no
+
+War machine: https://github.com/y3ll0w42/libft-war-machine
+Tripouille: https://github.com/Tripouille/libftTester
+Libft-unit-tester (alelievr): https://github.com/alelievr/libft-unit-test
