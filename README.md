@@ -4,7 +4,7 @@
 
 *** ENUNCIADO EN SUBJECT ***
 #
-Los testers que pasa son war machine, Tripouille y tester de alelievr (unit tester). El francinette mejor que no
+Los testers que pasa son war machine, Tripouille y tester de alelievr (unit tester). El francinette mejor que no. Hay que pasar primero el Tripouille, luego el uni-tester y al final el war machine, para el war machine hay que quietar el _bonus del nombre de los archivos.
 
 War machine: https://github.com/y3ll0w42/libft-war-machine
 
