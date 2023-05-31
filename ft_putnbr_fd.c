@@ -6,13 +6,13 @@
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 19:13:33 by migmoren          #+#    #+#             */
-/*   Updated: 2022/10/02 19:22:12 by migmoren         ###   ########.fr       */
+/*   Updated: 2023/03/08 16:49:54 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	ft_putchar(char c, int fd)
+static void	ft_putchar_aux(char c, int fd)
 {
 	write (fd, &c, 1);
 }
@@ -35,7 +35,7 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	else if (nb <= 9)
 	{
-		ft_putchar (nb + '0', fd);
+		ft_putchar_aux(nb + '0', fd);
 		return ;
 	}
 	else

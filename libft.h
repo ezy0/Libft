@@ -89,6 +89,9 @@ char	*ft_strjoin(char const *s1, char const *s2);
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strchr(const char *str, int c);
 
-
+char	*get_next_line(int fd);
+char	*get_clean_buffer(char *buffer);
+char	*get_line(char *buffer);
+char	*get_buffer(char *buffer, int fd);
 
 #endif
