@@ -6,7 +6,7 @@
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 17:00:26 by migmoren          #+#    #+#             */
-/*   Updated: 2022/10/19 18:09:14 by migmoren         ###   ########.fr       */
+/*   Updated: 2023/05/29 11:47:08 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdarg.h>
+# include <sys/types.h>
+# include <sys/uio.h>
 
 void	ft_bzero(void *s, size_t n);
 int		ft_isalnum(int c);
@@ -51,6 +54,12 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
+int		ft_putchar(char c);
+int		ft_printf(char const *str, ...);
+int		ft_print_s(char const *str);
+int		ft_print_p(void *ptr);
+int		ft_print_nbr(int num, char format);
+
 typedef struct s_list
 {
 	void			*content;
@@ -66,5 +75,20 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 10
+# endif
+
+# ifndef OPEN_MAX
+#  define OPEN_MAX 4096
+# endif
+
+void	ft_bzero(void *str, size_t n);
+char	*ft_strjoin(char const *s1, char const *s2);
+void	*ft_calloc(size_t count, size_t size);
+char	*ft_strchr(const char *str, int c);
+
+
 
 #endif
