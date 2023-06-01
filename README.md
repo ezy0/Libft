@@ -11,3 +11,5 @@ War machine: https://github.com/y3ll0w42/libft-war-machine
 Tripouille: https://github.com/Tripouille/libftTester
 
 Libft-unit-tester (alelievr): https://github.com/alelievr/libft-unit-test
+
+FT_PRINTF AÑADIDO
